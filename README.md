@@ -1,3 +1,3 @@
-# Sign-up Form
+# Calculator
 
-A fake registration form, built with HTML & CSS.
+A full-fledged calculator made with HTML, CSS and JavaScript.

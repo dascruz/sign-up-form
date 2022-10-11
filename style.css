@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,800;0,900;1,300&display=swap');
+
+:root {
+  --font: 'Roboto', sans-serif;
+  --max-width: 1400px;
+  --radius: 12px;
+  --btn-radius: 4px;
+  --i-padding: 1rem;
+  --o-padding: 2rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 var(--o-padding);
+  font-family: var(--font);
+  color: black;
+  background: linear-gradient(0deg, #c5c5c5, #f5f5f5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  max-width: var(--max-width);
+  width: 100%;
+  min-height: 600px;
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  border-radius: var(--radius);
+  display: flex;
+  box-shadow: 0 10px 1rem #0004;
+}
+
+.bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url(./bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 -200px;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
