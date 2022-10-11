@@ -13,18 +13,45 @@
     <div class="bg"></div>
     <div class="image">
       <div class="logo">
-        <img src="logo.jpg" alt="logo">
-        <h1 class="logo-text">Logo Text</h1>
+        <img src="./logo-black.png" alt="Hikened">
       </div>
       <span class="attribution">Photo by <a href="https://unsplash.com/@kimonmaritz" target="_blank">Kimon Maritz</a> on <a href="https://unsplash.com/photos/jl2T_E4tUyo" target="_blank">Unsplash</a></span>
     </div>
-    <div class="container-form">
+    <div class="form-container">
       <div class="form">
         <h2>
           Sign up now
         </h2>
-        <form action="#" method="post">
-
+        <form id="form" action="#" method="get">
+          <div class="input-container">
+            <input type="text" name="first" id="first" required />
+            <label for="first">First Name</label>
+          </div>
+          <div class="input-container">
+            <input type="text" name="last" id="last" required />
+            <label for="last">Last Name</label>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+          <div class="input-container">
+            <input type="tel" name="phone" id="phone" required />
+            <label for="phone">Phone Number</label>
+          </div>
+          <div class="input-container">
+            <input type="password" name="password" id="password" required />
+            <label for="password">Password</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="password"
+              name="c_password"
+              id="c_password"
+              required
+            />
+            <label for="c_password">Confirm Password</label>
+          </div>
         </form>
         <input form="form" type="submit" name="register" id="register" value="Register">
         <span id="login">Already registered? <a href="#" title="Login">Log in</a></span>

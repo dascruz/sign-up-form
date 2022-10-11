@@ -51,3 +51,161 @@ body {
   width: 100%;
   z-index: -1;
 }
+
+.image {
+  width: 40%;
+  padding: var(--i-padding);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.image .attribution {
+  font-size: 13px;
+  font-weight: 300;
+  text-align: center;
+  color: #fffa;
+}
+
+.image .attribution a {
+  transition: color 0.2s ease;
+  color: #fffa;
+}
+
+.image .attribution a:hover {
+  color: #fff;
+}
+
+.form-container {
+  width: 60%;
+  display: flex;
+  padding: var(--o-padding);
+  background: #fff1;
+  border-left: solid 1px #0001;
+  backdrop-filter: blur(8px);
+}
+
+.form-container .form {
+  width: 100%;
+  max-width: 504px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--o-padding);
+}
+
+.form-container .form h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 400;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #0001;
+}
+
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: calc(var(--i-padding) + 6px);
+  justify-items: center;
+}
+
+.input-container {
+  display: flex;
+  position: relative;
+}
+.input-container input {
+  border: none;
+  font-size: 16px;
+  outline: 0;
+  border-radius: var(--btn-radius);
+  background: #fff2;
+  border: solid 1px #0001;
+  padding: var(--i-padding);
+  min-width: 40%;
+  cursor: text;
+}
+
+.input-container label {
+  cursor: text;
+  padding: 4px 6px;
+  color: #0006;
+  position: absolute;
+  left: calc(1rem - 4px);
+  top: 10px;
+  user-select: none;
+  transform-origin: left;
+  transform: scale(1);
+  transition: all 0.2s ease;
+}
+
+.input-container input:focus + label,
+.input-container input:valid + label {
+  color: #fff;
+  text-shadow: 0 1px 4px #0009;
+  top: -14px;
+  left: 11px;
+  transform: scale(0.8);
+}
+
+#register {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  min-height: initial;
+  height: 47px;
+  width: 100%;
+  max-width: 230px;
+  background: #0007;
+  padding: var(--i-padding);
+  color: #fff;
+  border: unset;
+  border-radius: var(--btn-radius);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#register:hover {
+  background: #000;
+}
+
+#login {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff9;
+  margin: 0 auto;
+  margin-top: -20px;
+}
+
+#login a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .card {
+    flex-wrap: wrap;
+  }
+  .card .image,
+  .card .form-container {
+    width: 100%;
+  }
+  .card .image {
+    min-height: 160px;
+  }
+  .card .image .attribution {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  margin: auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+.logo {
+  padding: var(--o-padding) 3rem;
+}
