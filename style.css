@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,800;0,900;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,800;0,900;1,300&display=swap');
 
 :root {
-  --font: 'Roboto', sans-serif;
-  --max-width: 1400px;
-  --radius: 12px;
-  --btn-radius: 4px;
-  --i-padding: 1rem;
-  --o-padding: 2rem;
+  --font: 'Lato', sans-serif;
+  --max-width: 1200px;
+  --radius: 16px;
+  --btn-radius: 8px;
+  --inner-padding: 1rem;
+  --outer-padding: 2rem;
+  --light: #eee;
+  --dark: #111;
 }
 
 * {
@@ -16,10 +18,10 @@
 }
 
 body {
-  margin: 0 var(--o-padding);
+  margin: 0 var(--outer-padding);
   font-family: var(--font);
-  color: black;
-  background: linear-gradient(0deg, #c5c5c5, #f5f5f5);
+  color: var(--dark);
+  background: linear-gradient(0deg, #fff5ea, var(--light));
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,15 +30,13 @@ body {
 
 .card {
   max-width: var(--max-width);
-  width: 100%;
   min-height: 600px;
-  height: 100%;
   margin: auto;
   overflow: hidden;
   position: relative;
   border-radius: var(--radius);
   display: flex;
-  box-shadow: 0 10px 1rem #0004;
+  box-shadow: 0 1rem 2rem #0004;
 }
 
 .bg {
@@ -54,16 +54,26 @@ body {
 
 .image {
   width: 40%;
-  padding: var(--i-padding);
+  padding: var(--inner-padding);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
 }
 
+.logo {
+  padding: var(--outer-padding) 3rem;
+}
+
+.logo img {
+  max-width: 100%;
+  margin: auto;
+  pointer-events: none;
+  user-select: none;
+}
 
 .image .attribution {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 300;
   text-align: center;
   color: #fffa;
@@ -81,7 +91,7 @@ body {
 .form-container {
   width: 60%;
   display: flex;
-  padding: var(--o-padding);
+  padding: var(--outer-padding);
   background: #fff1;
   border-left: solid 1px #0001;
   backdrop-filter: blur(8px);
@@ -93,7 +103,7 @@ body {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: var(--o-padding);
+  gap: var(--outer-padding);
 }
 
 .form-container .form h2 {
@@ -107,7 +117,7 @@ body {
 form {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: calc(var(--i-padding) + 6px);
+  gap: calc(var(--inner-padding));
   justify-items: center;
 }
 
@@ -122,7 +132,7 @@ form {
   border-radius: var(--btn-radius);
   background: #fff2;
   border: solid 1px #0001;
-  padding: var(--i-padding);
+  padding: var(--inner-padding);
   min-width: 40%;
   cursor: text;
 }
@@ -142,7 +152,7 @@ form {
 
 .input-container input:focus + label,
 .input-container input:valid + label {
-  color: #fff;
+  color: var(--light);
   text-shadow: 0 1px 4px #0009;
   top: -14px;
   left: 11px;
@@ -158,8 +168,8 @@ form {
   width: 100%;
   max-width: 230px;
   background: #0007;
-  padding: var(--i-padding);
-  color: #fff;
+  padding: var(--inner-padding);
+  color: var(--light);
   border: unset;
   border-radius: var(--btn-radius);
   cursor: pointer;
@@ -167,7 +177,7 @@ form {
 }
 
 #register:hover {
-  background: #000;
+  background: var(--dark);
 }
 
 #login {
@@ -180,32 +190,5 @@ form {
 
 #login a {
   text-decoration: none;
-  color: #fff;
-}
-
-@media (max-width: 860px) {
-  .card {
-    flex-wrap: wrap;
-  }
-  .card .image,
-  .card .form-container {
-    width: 100%;
-  }
-  .card .image {
-    min-height: 160px;
-  }
-  .card .image .attribution {
-    display: none;
-  }
-}
-
-img {
-  max-width: 100%;
-  margin: auto;
-  pointer-events: none;
-  user-select: none;
-}
-
-.logo {
-  padding: var(--o-padding) 3rem;
+  color: var(--light);
 }
